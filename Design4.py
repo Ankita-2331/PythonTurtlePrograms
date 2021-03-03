@@ -1,0 +1,35 @@
+import turtle
+screen=turtle.Screen()
+t=turtle.Turtle()
+screen.setup(620,620)
+screen.bgcolor('black')
+t.pensize(4)
+t.shape('turtle')
+t.penup()
+t.pencolor('red')
+m=0
+for i in range(12):
+      m=m+1
+      t.penup()
+      t.setheading(-30*i+60)
+      t.forward(150)
+      t.pendown()
+      t.forward(25)
+      t.penup()
+      t.forward(20)
+      t.write(str(m),font=(12))
+      if m==12:
+        m=0
+      t.home()
+t.home()
+t.setpos(0,-250)
+t.pendown()
+t.pensize(5)
+t.pencolor('yellow')
+t.circle(250)
+t.penup()
+t.setpos(0,0)
+t.pendown()
+t.pencolor('orange')
+t.circle(10)
+t.home()
